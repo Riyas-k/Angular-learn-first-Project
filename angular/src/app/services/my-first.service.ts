@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
+
 export class MyFirstService {
   messages: Array<any> = [];
   constructor() {
