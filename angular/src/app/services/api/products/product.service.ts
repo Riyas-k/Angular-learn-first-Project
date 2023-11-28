@@ -13,12 +13,12 @@ export class ProductService {
 
   getAllProductsLimit(limit: number = 5): Observable<any> {
     // const productUrl : string = this.baseUrl + 'products?limit='+5;
-    const productUrl: string = `${this.baseUrl}products?limit=${limit}`;
+    const productUrl: string = `${this.baseUrl}products`;
     return this.http.get<Array<ProductRepresentation>>(productUrl);
   }
 
   createProduct(product: ProductRepresentation): Observable<Object> {
-    const productUrl: string = `${this.baseUrl}productss`;
+    const productUrl: string = `${this.baseUrl}products`;
     return this.http.post<ProductRepresentation>(productUrl, product);
   }
 }
